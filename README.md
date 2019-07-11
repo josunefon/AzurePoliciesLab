@@ -15,7 +15,8 @@ However, this Lab will not explain the required DevOps toolset, so in order to s
 + Azure Repos / Github
 + Azure Pipelines (Classic and YAML)
 
-## Tools
+
+## Recommended software for your PC
 
 ### Azure PowerShell Az module
 
@@ -34,6 +35,25 @@ You will need a IDE to let you work with an Azure DevOps or GitHub Repository an
 + [Azure Resource Manager Tools](https://marketplace.visualstudio.com/items?itemName=msazurermtools.azurerm-vscode-tools)
 + [PowerShell](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell)
 
+## Pre-provisioned Environment
+
+You can use a pre-provisioned environment for this lab in [Cloud Labs](https://aka.ms/R-AIST314).
+
+This environment will provision for you:
++ An Azure DevOps Project
++ An Azure Subscription
++ An Azure Resource Group
++ An AAD User with Owner permissions assigned to the Resource Group and permissions to work with Policies at subscription level
++ An AAD Service Principal with Owner permissions assigned to the Resource Group and permissions to work with Policies at subscription level.
+
+You will need to **add the provisioned Service Principal to the Azure DevOps project** as a [Azure RM Service Connection](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/connect-to-azure?view=azure-devops#create-an-azure-resource-manager-service-connection-with-an-existing-service-principal).
+
+Then you can use [Visual Studio Code to clone](https://code.visualstudio.com/docs/editor/versioncontrol#_cloning-a-repository) the Repo and start the lab or use your own GitHub repo.
+
+## Configure your own environment
+
+If you want to do this lab in your own environment istead of the Pre-provisioned environment, you need to configure the prerequisites listed below:
+
 ### Git Repo (Azure DevOps Repo / Github)
 
 You will write and version your ARM Templates using a Git Repo. You have two options for 
@@ -41,7 +61,7 @@ You will write and version your ARM Templates using a Git Repo. You have two opt
 + Option 1 - [Azure DevOps Repos](https://docs.microsoft.com/en-us/azure/devops/pipelines/repos/?view=azure-devops): See how to get your free Azure DevOps Project [here](https://docs.microsoft.com/en-us/azure/devops/user-guide/sign-up-invite-teammates?view=azure-devops)
 + Option 2 - [GitHub](https://help.github.com/en/articles/create-a-repo) repos: see how to get your [Github account](https://github.com/join).
 
-See how to sync your Repo with Visual Studio Code
+See how to [clone your Repo with Visual Studio Code](https://code.visualstudio.com/docs/editor/versioncontrol#_cloning-a-repository)
 
 ### Azure Pipelines
 
